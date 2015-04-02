@@ -166,14 +166,14 @@
                   <tbody>
                     <% @task.subtasks.each do |subtask| %>
                       <tr id="subtask_<%= subtask.id %>">
-                      <%= form_for([subtask.task, subtask]) do |f| %>
+<!--                       <%= form_for([subtask.task, subtask]) do |f| %>
                           <td><div class="center-text"><%= f.check_box :is_done %></div></td>
                           <td><%= f.text_field :description %></td>
                           <td><div class="center-text"><%= f.submit "Update" %></div></td>
                       <% end %>
                         <td><div class="center-text"><%= button_to 'Delete', [subtask.task, subtask], method: :delete %></div></td>
                       </tr>
-                    <% end %>
+                    <% end %> -->
                     <%= form_for([@task, @subtask]) do |f| %>
                       <tr id="subtask_new">
                         <td class="center-text"><%= f.check_box :is_done %></td>
