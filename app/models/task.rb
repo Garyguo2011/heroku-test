@@ -154,12 +154,12 @@ class Task < ActiveRecord::Base
     return self.release <= endDate && self.due >= startDate
   end
 
-  def subtask_complete_percent
-    return self.subtasks.progress_percent
-  end
+  # def subtask_complete_percent
+  #   return self.subtasks.progress_percent
+  # end
 
-  def subtask_complete_in_word
-    return self.subtasks.progress_in_words
-  end
+  # def subtask_complete_in_word
+  #   return self.subtasks.progress_in_words
+  # end
 
 end
