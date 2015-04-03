@@ -62,10 +62,6 @@ class TasksController < ApplicationController
     begin
       @task = Task.accessible_by(current_ability).find(params[:id])
       @subtask = Subtask.new({ :task => @task })
-      # @has_subtask = @task.subtasks.count > 0
-      # @progress_percent = @task.subtasks.progress_percent
-      # @progress_in_words = @task.subtasks.progress_in_words.progress_in_words
-
 
       respond_to do |format|
         format.html # show.html.erb
