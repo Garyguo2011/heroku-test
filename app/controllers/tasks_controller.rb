@@ -65,8 +65,10 @@ class TasksController < ApplicationController
 
       puts @task.subtasks
       puts @task.subtasks.count
-      puts @task.subtasks.progress_in_words
-      puts @task.subtasks.progress_percent
+      # puts @task.subtasks.progress_in_words
+      # puts @task.subtasks.progress_percent
+      puts @task.subtask_complete_percent
+      puts @task.subtask_complete_in_word
 
       respond_to do |format|
         format.html # show.html.erb
