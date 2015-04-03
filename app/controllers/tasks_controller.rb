@@ -63,6 +63,11 @@ class TasksController < ApplicationController
       @task = Task.accessible_by(current_ability).find(params[:id])
       @subtask = Subtask.new({ :task => @task })
 
+      puts @task.subtasks
+      puts @task.subtasks.count
+      puts @task.subtasks.progress_in_words
+      puts @task.subtasks.progress_percent
+
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @task }
